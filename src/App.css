@@ -1,0 +1,48 @@
+table, th, td {
+  border: 1px solid;
+}
+
+td {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding: 10px 10px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+#root {
+  display: grid;
+  place-items: center;
+}
+
+.post-item {
+  cursor: pointer;
+}
+
+.post-comments {
+  display: grid;
+  place-items: center;
+}
+
+.ul-comments {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  place-items: center;
+  align-content: start;
+  width: 80%;
+  padding-top: 100px;
+}
+
+.comment-li {
+  display: grid;
+  grid-template-rows: repeat(3, 0.33fr);
+  grid-gap: 10px;
+  list-style: none;
+  place-items: center;
+  align-content: start;
+}
