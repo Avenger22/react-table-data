@@ -23,7 +23,25 @@ table {
   cursor: pointer;
 }
 
+.table-wrapper {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-gap: 150px;
+  place-items: center;
+}
+
+/* .table-data {
+  padding-top: 10px;
+  padding-bottom: 50px;
+} */
 .post-comments {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* .post-comments {
   display: grid;
   place-items: center;
 }
@@ -45,4 +63,4 @@ table {
   list-style: none;
   place-items: center;
   align-content: start;
-}
+} */

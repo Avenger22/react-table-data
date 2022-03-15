@@ -27,7 +27,7 @@ export default function PostItemPage() {
 
     return (
 
-        <>
+        <div className="table-wrapper">
 
             <table className='table-data'>
             
@@ -61,38 +61,64 @@ export default function PostItemPage() {
 
             </table>
 
-            <div className="post-comments">
+            <table className="post-comments">
 
-                <ul className="ul-comments">
+                <thead>
+
+                    <tr>
+
+                        <th>Post Nr</th>
+                        <th>Comment Nr</th>
+                        <th>Comment Title</th>
+                        <th>Comment Body</th>
+                        <th>Comment Email</th>
+                        <th>Username</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody className="ul-comments">
 
                     {
                         postItem.comments.map(comment => 
                             
-                            <div className="comment-li">
+                            <tr className="comment-li">
 
-                                <li className="comment">
-                                    Title: {comment.name}
-                                </li>
+                                <td className="comment">
+                                    {postItem.id}
+                                </td>
 
-                                <li className="comment">
-                                    Email: {comment.email}
-                                </li>
+                                <td className="comment">
+                                    {comment.id}
+                                </td>
 
-                                <li className="comment">
-                                    Body of comment: {comment.body}
-                                </li>
+                                <td className="comment">
+                                    {comment.name}
+                                </td>
+                                <td className="comment">
+                                    {comment.body}
+                                </td>
 
-                            </div>
+                                <td className="comment">
+                                    {comment.email}
+                                </td>
+
+                                <td className="comment">
+                                    {postItem.user.username}
+                                </td>
+
+                            </tr>
 
                         )
 
                     }
 
-                </ul>
+                </tbody>
 
-            </div>
+            </table>
 
-        </>
+        </div>
 
     )
 
